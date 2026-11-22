@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>A Little Birthday Dream ♡</title>
+
+  <style>
+
+    * { box-sizing: border-box; }
+
+    body {
+
+      margin: 0;
+
+      min-height: 100vh;
+
+      display: grid;
+
+      place-items: center;
+
+background: linear-gradient(135deg, #e9b9c5, #f8cbd0, #f4b9c3, #eac0d0);
+      
+      font-family: Georgia, serif;
+
+      color: #80536c;
+
+      text-align: center;
+
+      padding: 24px;
+
+    }
+
+  .card {
+  background: rgba(255, 245, 248, 0.82);
+  backdrop-filter: blur(8px);
+  padding: 38px 24px;
+  border-radius: 25px;
+  max-width: 420px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 10px 35px rgba(180, 100, 130, 0.2),
+              0 0 25px rgba(255, 220, 230, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+    .flower {
+  font-size: 55px;
+  filter: drop-shadow(0 4px 8px #d98bad88);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+    h1 { font-size: 32px; line-height: 1.4; }
+
+    p { line-height: 1.8; }
+
+  button {
+  background: #d98bad;
+  color: white;
+  border: 0;
+  border-radius: 25px;
+  padding: 14px 25px;
+  font-size: 16px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+  #surprise {
+  display: none;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  margin-top: 25px;
+  padding: 18px;
+  background: rgba(255, 230, 238, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 18px;
+  box-shadow: 0 5px 18px rgba(200, 130, 160, 0.12);
+}
+
+body::before {
+  content: "✧ ˚｡⋆ ✨ ⋆｡˚ ✧";
+  position: fixed;
+  top: 8%;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-size: 22px;
+  letter-spacing: 12px;
+  opacity: 0.8;
+  animation: sparkle 2s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes sparkle {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+body::after {
+  content: "🌷  🌷  🌷  🌷  🌷";
+  position: fixed;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  font-size: 27px;
+  letter-spacing: 5px;
+  opacity: 0.85;
+  pointer-events: none;
+  animation: float 3s ease-in-out infinite;
+}
+
+.card::after {
+  content: "♡  ✧  ♡";
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  color: #e7a3b9;
+  font-size: 22px;
+  letter-spacing: 12px;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+
+.white-bow {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  width: 38px;
+  height: 25px;
+  z-index: 2;
+  background: radial-gradient(circle at center, white 0 3px, transparent 3.5px);
+}
+
+.white-bow::before,
+.white-bow::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  width: 15px;
+  height: 17px;
+  border: 2px solid #fff;
+  border-radius: 70% 30% 70% 30%;
+  filter: drop-shadow(0 1px 3px #dca9c4);
+}
+
+.white-bow::before {
+  left: 1px;
+  transform: rotate(25deg);
+}
+
+.white-bow::after {
+  right: 1px;
+  transform: rotate(65deg);
+}
+
+.card::before {
+  content: "✧  ˚  ✦  ˚  ✧";
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 10px;
+  opacity: 0.7;
+  pointer-events: none;
+  animation: sparkle 2s ease-in-out infinite alternate;
+}
+
+.name {
+  font-size: 21px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  color: #bd7898;
+  margin-bottom: 5px;
+  text-shadow: 0 2px 8px #e9b9c588;
+}
+   
+  </style>
+
+</head>
+
+<body>
+
+  <main class="card">
+
+        <div class="white-bow"></div>
+
+    <div class="flower">🌷</div>
+
+    <p> A little birthday surprise for the most precious person in my world.</p>
+
+<h2 class="name">For My Heartbeat ♡</h2>
+   
+     <h1>Happy Birthday! ♡</h1>
+
+    <p>May your day be as beautiful as you are.♡</p>
+
+    <button onclick="openSurprise()">Open Your Surprise 💌</button>
+
+    <div id="surprise">
+
+      <h2>You're Special! ✨</h2>
+
+      <p>I don't think words will ever be enough to tell you how much you mean to me.</p>
+
+<p>If there's one thing I could wish for you, it's that you always have reasons to be happy.</p>
+
+      <p>Stay happy, always. ♡</p>
+
+    </div>
+
+  </main>
+
+  <script>
+  
+  function openSurprise() {
+
+  const surprise = document.getElementById("surprise");
+  surprise.style.display = "block";
+
+  setTimeout(() => {
+    surprise.style.opacity = "1";
+    surprise.style.transform = "translateY(0)";
+  }, 10);
+
+}
+
+  </script>
+
+</body>
+
+</html>
