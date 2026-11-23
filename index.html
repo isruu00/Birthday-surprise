@@ -308,9 +308,11 @@ body::after {
 }
 
 #countdown-screen .ribbon {
-  font-size: 42px;
-  margin-bottom: 12px;
-  filter: drop-shadow(0 3px 8px #c9a5d8);
+  font-size: 52px;
+  margin-bottom: 8px;
+  filter:
+    drop-shadow(0 3px 5px #fff)
+    drop-shadow(0 0 12px #e9a9d0);
   animation: float 3s ease-in-out infinite;
 }
 
@@ -321,22 +323,35 @@ body::after {
 }
 
 .moon {
-  font-size: 75px;
-  color: #fff8f4;
+  font-size: 88px;
+  color: #fffafc;
   text-shadow:
-    0 0 10px #fff,
-    0 0 25px #f9c5df,
-    0 0 45px #d9b9f2;
-  margin: 5px 0 12px;
+    0 0 8px #ffffff,
+    0 0 18px #ffd5e8,
+    0 0 35px #e9b9f5,
+    0 0 55px #cdb1ed;
+  margin: 8px 0 15px;
+  filter: drop-shadow(0 0 12px #f4c9e8);
   animation: float 4s ease-in-out infinite;
 }
 
 .butterflies {
-  font-size: 27px;
-  margin: 5px 0 15px;
-  filter: drop-shadow(0 0 8px #e9b9ed);
-  animation: float 3s ease-in-out infinite;
+  font-size: 32px;
+  letter-spacing: 12px;
+  margin: 8px 0 18px;
+  filter:
+    drop-shadow(0 0 5px #fff)
+    drop-shadow(0 0 12px #e9b9ed);
+  animation: butterflyFloat 3s ease-in-out infinite;
 }
+
+@keyframes butterflyFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
 
 #countdown-screen .sparkles {
   position: absolute;
@@ -344,12 +359,16 @@ body::after {
   left: 0;
   width: 100%;
   color: #fff;
-  font-size: 23px;
-  letter-spacing: 15px;
-  text-shadow: 0 0 12px #fff, 0 0 20px #e9b8ed;
+  font-size: 25px;
+  letter-spacing: 18px;
+  text-shadow:
+    0 0 8px #fff,
+    0 0 18px #f5bde0,
+    0 0 30px #d8b9f5;
   animation: sparkle 2s ease-in-out infinite alternate;
   pointer-events: none;
 }
+
 </style>
 
 </head>
