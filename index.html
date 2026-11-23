@@ -292,21 +292,199 @@ body::after {
 
   </main>
 
-  <script>
-  
-  function openSurprise() {
+
+
+<script>
+
+function openSurprise() {
 
   const surprise = document.getElementById("surprise");
+
   surprise.style.display = "block";
 
   setTimeout(() => {
+
     surprise.style.opacity = "1";
+
     surprise.style.transform = "translateY(0)";
+
   }, 10);
 
 }
 
-  </script>
+// Birthday Countdown
+
+const birthday = new Date(2026, 11, 13, 0, 0, 0).getTime();
+
+const countdownScreen = document.getElementById("countdown-screen");
+
+const card = document.querySelector(".card");
+
+card.style.display = "none";
+
+function updateCountdown() {
+
+  const now = new Date().getTime();
+
+  const distance = birthday - now;
+
+  if (distance <= 0) {
+
+    clearInterval(timer);
+
+    celebrateBirthday();
+
+    return;
+
+  }
+
+  document.getElementById("days").textContent =
+
+    Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  document.getElementById("hours").textContent =
+
+    Math.floor((distance / (1000 * 60 * 60)) % 24);
+
+  document.getElementById("minutes").textContent =
+
+    Math.floor((distance / (1000 * 60)) % 60);
+
+  document.getElementById("seconds").textContent =
+
+    Math.floor((distance / 1000) % 60);
+
+}
+
+updateCountdown();
+
+const timer = setInterval(updateCountdown, 1000);
+
+// Birthday Surprise Animation
+
+function celebrateBirthday() {
+
+  const party = document.createElement("div");
+
+  party.id = "birthday-party";
+
+  party.innerHTML = `
+
+    <style>
+
+      #birthday-party {
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 10000;
+
+        overflow: hidden;
+
+        pointer-events: none;
+
+      }
+
+      .balloon {
+
+        position: absolute;
+
+        bottom: -100px;
+
+        font-size: 48px;
+
+        animation: flyUp 4s ease-in forwards;
+
+      }
+
+      .confetti {
+
+        position: absolute;
+
+        top: -20px;
+
+        width: 9px;
+
+        height: 14px;
+
+        animation: fallDown 3s ease-in forwards;
+
+      }
+
+      @keyframes flyUp {
+
+        to { transform: translateY(-120vh) rotate(25deg); }
+
+      }
+
+      @keyframes fallDown {
+
+        to {
+
+          transform: translateY(110vh) rotate(720deg);
+
+          opacity: 0;
+
+        }
+
+      }
+
+    </style>
+
+  `;
+
+  document.body.appendChild(party);
+
+  const balloons = ["🎈", "🎈", "🎈", "🎈", "🎈", "🎈"];
+
+  balloons.forEach((emoji, i) => {
+
+    const balloon = document.createElement("div");
+
+    balloon.className = "balloon";
+
+    balloon.textContent = emoji;
+
+    balloon.style.left = (i * 16 + 4) + "%";
+
+    balloon.style.animationDelay = (i * 0.25) + "s";
+
+    party.appendChild(balloon);
+
+  });
+
+  const colors = ["#ff6b9d", "#ffd166", "#b68cff", "#ff91c8", "#8ed8d2"];
+
+  for (let i = 0; i < 100; i++) {
+
+    const piece = document.createElement("div");
+
+    piece.className = "confetti";
+
+    piece.style.left = Math.random() * 100 + "%";
+
+    piece.style.background = colors[i % colors.length];
+
+    piece.style.animationDelay = Math.random() * 1.5 + "s";
+
+    party.appendChild(piece);
+
+  }
+
+  setTimeout(() => {
+
+    countdownScreen.style.display = "none";
+
+    card.style.display = "block";
+
+    party.remove();
+
+  }, 4500);
+
+}
+
+</script>
 
 </body>
 
