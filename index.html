@@ -200,19 +200,21 @@ body::after {
   position: fixed;
   inset: 0;
   z-index: 9999;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   padding: 20px 14px;
   overflow-y: auto;
 
-
-background-image: url("6A15E43A-D729-4EF8-A0B2-69C1D78A9D0E.png");
-background-position: center center;
-background-size: cover;
-background-repeat: no-repeat;
-
+  background:
+  radial-gradient(circle at 50% 15%, rgba(255,255,255,0.55), transparent 30%),
+  radial-gradient(circle at 10% 80%, rgba(255,165,200,0.65), transparent 45%),
+  radial-gradient(circle at 90% 75%, rgba(190,155,230,0.65), transparent 45%),
+  linear-gradient(135deg, #f4c5dc, #d9c4ef, #f3c4dc, #cbb8e8);
+ 
   color: #896b98;
   text-align: center;
 }
@@ -386,12 +388,6 @@ background-repeat: no-repeat;
 <body>
 
 <div id="countdown-screen">
-
-<div class="ribbon">🎀</div>
-
-<div class="moon">☾</div>
- 
-<div class="butterflies">🦋　🦋</div>
 
 <div class="sparkles">✧ ˚ ✦ ˚ ✧</div>
 
