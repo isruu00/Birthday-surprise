@@ -245,6 +245,55 @@ body::after {
   color: #987d9b;
 }
 
+
+#countdown-screen::before {
+  content: "✦  ˚  ✧  ♡  ✧  ˚  ✦";
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  color: white;
+  font-size: 25px;
+  letter-spacing: 12px;
+  opacity: 0.8;
+  animation: sparkle 2s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+#countdown-screen::after {
+  content: "♡  ✧  ♡  ✧  ♡";
+  position: absolute;
+  bottom: 8%;
+  width: 100%;
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 14px;
+  animation: float 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+#countdown-screen h2 {
+  position: relative;
+  z-index: 2;
+}
+
+#countdown-screen .countdown {
+  position: relative;
+  z-index: 2;
+}
+
+#countdown-screen .ribbon {
+  font-size: 42px;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 3px 8px #c9a5d8);
+  animation: float 3s ease-in-out infinite;
+}
+
+#countdown-screen .dreamy-text {
+  color: #98749e;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
   </style>
 
 </head>
