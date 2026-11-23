@@ -195,7 +195,47 @@ body::after {
   margin-bottom: 5px;
   text-shadow: 0 2px 8px #e9b9c588;
 }
-   
+
+    #countdown-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e9b9c5, #f8cbd0, #f4b9c3);
+  color: #80536c;
+  text-align: center;
+}
+
+#countdown-screen h2 {
+  font-size: 28px;
+  color: #bd7898;
+}
+
+.countdown {
+  display: flex;
+  gap: 10px;
+}
+
+.countdown div {
+  background: rgba(255,255,255,0.65);
+  padding: 15px 10px;
+  border-radius: 15px;
+  min-width: 65px;
+}
+
+.countdown span {
+  display: block;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.countdown small {
+  font-size: 11px;
+}
+
   </style>
 
 </head>
