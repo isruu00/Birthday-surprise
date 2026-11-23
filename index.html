@@ -229,30 +229,48 @@ body::after {
 
 .countdown {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
+  width: 100%;
+  padding: 10px;
 }
 
 .countdown div {
-  background: rgba(255,255,255,0.65);
-  padding: 15px 10px;
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.78),
+    rgba(238,214,249,0.65),
+    rgba(255,220,235,0.75)
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 18px 8px;
   border-radius: 18px;
-  min-width: 65px;
-  border: 1px solid rgba(255,255,255,0.8);
-  box-shadow: 0 5px 20px rgba(145,110,160,0.12);
+  min-width: 0;
+  flex: 1;
+  max-width: 85px;
+  border: 1px solid rgba(255,255,255,0.9);
+  box-shadow:
+    0 6px 18px rgba(174,130,190,0.16),
+    inset 0 1px 8px rgba(255,255,255,0.8);
 }
 
 .countdown span {
   display: block;
   font-size: 25px;
   font-weight: bold;
-  color: #98749e;
+  color: #a17cac;
+  text-shadow: 0 2px 8px #fff;
 }
 
 .countdown small {
+  display: block;
+  margin-top: 5px;
   font-size: 11px;
-  color: #987d9b;
+  color: #b17eaa;
+  letter-spacing: 1px;
 }
-
 
 #countdown-screen::before {
   content: "✦  ˚  ✧  ♡  ✧  ˚  ✦";
