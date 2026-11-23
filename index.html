@@ -204,6 +204,8 @@ body::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px 14px;
+  overflow-y: auto;
 
   background:
     radial-gradient(circle at 50% 18%, rgba(255,255,255,0.85), transparent 28%),
@@ -217,21 +219,28 @@ body::after {
 
 #countdown-screen h2 {
   font-family: Georgia, serif;
-  font-size: 30px;
+  font-size: 27px;
   font-weight: normal;
   letter-spacing: 2px;
   color: #a77caa;
   text-shadow:
     0 0 8px #fff,
     0 0 18px #f8c6df;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+#countdown-screen > p {
+  font-size: 13px;
+  color: #987da5;
+  margin: 0 0 8px;
+  letter-spacing: 0.5px;
 }
 
 .countdown {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   width: 100%;
   padding: 10px;
 }
