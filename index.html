@@ -196,7 +196,6 @@ body::after {
   text-shadow: 0 2px 8px #e9b9c588;
 }
 
-
 #countdown-screen {
   position: fixed;
   inset: 0;
@@ -205,18 +204,27 @@ body::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   background:
-    linear-gradient(135deg, #e9dff5, #f5dce9, #e5d9f2);
-    radial-gradient(circle at 85% 80%, rgba(255,220,235,0.6), transparent 35%),
-    linear-gradient(135deg, #e9dff5, #f5dce9, #e5d9f2);
-  color: #795d7d;
+    radial-gradient(circle at 50% 18%, rgba(255,255,255,0.85), transparent 28%),
+    radial-gradient(circle at 15% 75%, rgba(255,190,215,0.55), transparent 38%),
+    radial-gradient(circle at 85% 80%, rgba(205,180,235,0.55), transparent 38%),
+    linear-gradient(135deg, #f7dce9, #e8d9f5, #f6dce9, #e3d5f2);
+
+  color: #896b98;
   text-align: center;
 }
 
 #countdown-screen h2 {
-  font-size: 28px;
-  color: #a77da9;
-  text-shadow: 0 2px 12px rgba(255,255,255,0.8);
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  color: #a77caa;
+  text-shadow:
+    0 0 8px #fff,
+    0 0 18px #f8c6df;
+  margin-bottom: 8px;
 }
 
 .countdown {
@@ -294,17 +302,53 @@ body::after {
   letter-spacing: 1px;
 }
 
-  </style>
+.moon {
+  font-size: 75px;
+  color: #fff8f4;
+  text-shadow:
+    0 0 10px #fff,
+    0 0 25px #f9c5df,
+    0 0 45px #d9b9f2;
+  margin: 5px 0 12px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.butterflies {
+  font-size: 27px;
+  margin: 5px 0 15px;
+  filter: drop-shadow(0 0 8px #e9b9ed);
+  animation: float 3s ease-in-out infinite;
+}
+
+#countdown-screen .sparkles {
+  position: absolute;
+  top: 12%;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  font-size: 23px;
+  letter-spacing: 15px;
+  text-shadow: 0 0 12px #fff, 0 0 20px #e9b8ed;
+  animation: sparkle 2s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+</style>
 
 </head>
 
 <body>
 
-   <div id="countdown-screen">
+<div id="countdown-screen">
 
-  <h2>Birthday Countdown ♡</h2>
+<div class="ribbon">🎀</div>
 
-  <p>Counting down to your special day...</p>
+<div class="moon">☾</div>
+ 
+<div class="butterflies">🦋　🦋</div>
+
+<h2>Birthday Countdown ♡</h2>
+
+<p>Counting down to your special day...</p>
 
   <div class="countdown">
 
