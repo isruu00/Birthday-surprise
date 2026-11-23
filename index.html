@@ -196,7 +196,8 @@ body::after {
   text-shadow: 0 2px 8px #e9b9c588;
 }
 
-    #countdown-screen {
+
+#countdown-screen {
   position: fixed;
   inset: 0;
   z-index: 9999;
@@ -204,14 +205,18 @@ body::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #e9b9c5, #f8cbd0, #f4b9c3);
-  color: #80536c;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,0.65), transparent 30%),
+    radial-gradient(circle at 85% 80%, rgba(255,220,235,0.6), transparent 35%),
+    linear-gradient(135deg, #e9dff5, #f5dce9, #e5d9f2);
+  color: #795d7d;
   text-align: center;
 }
 
 #countdown-screen h2 {
   font-size: 28px;
-  color: #bd7898;
+  color: #a77da9;
+  text-shadow: 0 2px 12px rgba(255,255,255,0.8);
 }
 
 .countdown {
@@ -222,18 +227,22 @@ body::after {
 .countdown div {
   background: rgba(255,255,255,0.65);
   padding: 15px 10px;
-  border-radius: 15px;
+  border-radius: 18px;
   min-width: 65px;
+  border: 1px solid rgba(255,255,255,0.8);
+  box-shadow: 0 5px 20px rgba(145,110,160,0.12);
 }
 
 .countdown span {
   display: block;
   font-size: 25px;
   font-weight: bold;
+  color: #98749e;
 }
 
 .countdown small {
   font-size: 11px;
+  color: #987d9b;
 }
 
   </style>
